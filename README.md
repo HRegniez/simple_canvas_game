@@ -35,11 +35,11 @@ Decided to start this series of tutorials to learn more about coding using JavaS
   - create bullet - done
   - move bullet - done
 - create enemies - done
-- detect colision - enemy/bullet
-- detect collision - enemy/player
-- remove offscreen bullets
-- add colors
-- enemy shrink on hit
+- detect colision - enemy/bullet - done
+- detect collision - enemy/player - done
+- remove offscreen bullets - done
+- add colors - done
+- enemy shrink on hit - done
 - bullet fx
 - add score
 - add game over ui

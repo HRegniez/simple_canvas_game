@@ -1,3 +1,4 @@
+console.log(gsap)
 const canvas = document.querySelector('canvas');
 
 const c = canvas.getContext('2d');
@@ -74,7 +75,7 @@ class Enemy {  /**********************************************Enemy constructor 
 const x = canvas.width / 2;  /**********Set position to canvas center */
 const y = canvas.height / 2;
 
-const player = new Player(x, y, 30, 'blue');  /*****************Create player */
+const player = new Player(x, y, 30, 'white');  /*****************Create player */
 
 
 
@@ -98,7 +99,7 @@ function spawnEnemies() {
         }
         
 
-        const color = 'green';
+        const color = `hsl(${Math.random() * 360}, 50%, 50%`;
         
         const angle = Math.atan2(
             canvas.height / 2 - y, 
@@ -119,7 +120,8 @@ let animationId;
 function animate() {
     animationId = requestAnimationFrame(animate);
     
-    c.clearRect(0, 0, canvas.width, canvas.height);
+    c.fillStyle = 'rgba(0, 0, 0, 0.1)';
+    c.fillRect(0, 0, canvas.width, canvas.height);
 
     player.draw();  /*********************************************************************Draw player */
     bullets.forEach((bullet, index) => {
@@ -147,13 +149,23 @@ function animate() {
         }
 
         bullets.forEach((bullet, bulletIndex) => {
+            const dist = Math.hypot(bullet.x - enemy.x, bullet.y - enemy.y);
             
-            
-            if (dist - enemy.radius - bullet.radius < 1) {
-                setTimeout(() => {
+            if (dist - enemy.radius - bullet.radius < 1) {/*********When bullet hits enemy */
+                if(enemy.radius - 10 > 6) {
+                    gsap.to(enemy, {
+                        radius: enemy.radius - 10
+                    })
+                    setTimeout(() => {
+                        bullets.splice(bulletIndex, 1);
+                    }, 0);
+                }else{
+                    setTimeout(() => {
                     enemies.splice(index, 1);
                     bullets.splice(bulletIndex, 1);
                 }, 0);
+                }
+                
             };
         });
     });
@@ -166,19 +178,19 @@ window.addEventListener('click', (event) => {     /***************Create bullet 
         )
     
     const velocity = {
-        x: Math.cos(angle),
-        y: Math.sin(angle)
+        x: Math.cos(angle) * 5,
+        y: Math.sin(angle) * 5
     }
 
     bullets.push(new Bullet(
         canvas.width/2, 
         canvas.height/2, 
         5, 
-        'red', 
+        'white', 
         velocity
     ))
     
 });
 
-// animate();
-// spawnEnemies();
+animate();
+spawnEnemies();
