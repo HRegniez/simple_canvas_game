@@ -40,11 +40,11 @@ Decided to start this series of tutorials to learn more about coding using JavaS
 - remove offscreen bullets - done
 - add colors - done
 - enemy shrink on hit - done
-- bullet fx
-- add score
-- add game over ui
-- add restart button
-- add start game button
+- bullet fx - done
+- add score - done
+- add game over ui - done
+- add restart button - done
+- add start game button - done
 
 ### Useful resources
 
