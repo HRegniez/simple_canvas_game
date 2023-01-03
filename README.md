@@ -1,9 +1,8 @@
-# Canvas Game
+# Simple Canvas Game
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -15,11 +14,9 @@
 
 Decided to start this series of tutorials to learn more about coding using JavaScript while having fun.
 
-### Screenshot
-
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Simple Canvas game](https://hregniez.github.io/simple_canvas_game/)
 
 ## My process
 
