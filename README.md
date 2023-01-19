@@ -12,20 +12,13 @@
 
 ## Overview
 
-Decided to start this series of tutorials to learn more about coding using JavaScript while having fun.
+Decided to code this qimple shooter game to learn more about coding using JavaScript while having fun.
 
 ### Links
 
 - Live Site URL: [Simple Canvas game](https://hregniez.github.io/simple_canvas_game/)
 
 ## My process
-
-### Built with
-
-- HTML
-- JavaScript
-
-### Continued development
 
 - create player - done
 - shoot bullets
@@ -42,6 +35,12 @@ Decided to start this series of tutorials to learn more about coding using JavaS
 - add game over ui - done
 - add restart button - done
 - add start game button - done
+
+### Built with
+
+- HTML
+- JavaScript
+
 
 ### Useful resources
 
